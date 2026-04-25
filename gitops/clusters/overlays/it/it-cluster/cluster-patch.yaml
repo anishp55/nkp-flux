@@ -16,7 +16,7 @@ spec:
       cidrBlocks:
         - 10.96.0.0/12
   controlPlaneEndpoint:
-    host: 10.8.18.134
+    host: 10.8.18.148
     port: 6443
   topology:
     class: nkp-nutanix-v2.17.1
@@ -73,8 +73,8 @@ spec:
             serviceLoadBalancer:
               configuration:
                 addressRanges:
-                  - start: 10.8.18.135
-                    end: 10.8.18.136
+                  - start: 10.8.18.149
+                    end: 10.8.18.151
               provider: MetalLB
           controlPlane:
             autoRenewCertificates:
@@ -107,7 +107,7 @@ spec:
             mode: disabled
           nutanix:
             controlPlaneEndpoint:
-              host: 10.8.18.134
+              host: 10.8.18.148
               port: 6443
               virtualIP:
                 provider: KubeVIP
