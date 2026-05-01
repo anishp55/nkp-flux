@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
   - ks-external-secrets.yaml
   - ks-cluster-credentials.yaml
-  - ks-clusters.yaml
