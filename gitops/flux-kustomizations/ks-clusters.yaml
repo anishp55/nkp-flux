@@ -11,7 +11,7 @@ spec:
       namespace: infra-flux-validation
     - name: cluster-credentials
       namespace: infra-flux-validation
-  interval: 10m0s
+  interval: 5m0s
   path: ./gitops/clusters
   prune: true
   serviceAccountName: infra-flux-validation
