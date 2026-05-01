@@ -5,7 +5,7 @@ metadata:
   namespace: infra-flux-validation
 spec:
   dependsOn:
-    - name: flux
+    - name: workspaces
       namespace: infra-flux-validation
     - name: external-secrets
       namespace: infra-flux-validation
@@ -18,5 +18,5 @@ spec:
   sourceRef:
     apiVersion: source.toolkit.fluxcd.io/v1
     kind: GitRepository
-    name: flux
+    name: workspaces
     namespace: infra-flux-validation
