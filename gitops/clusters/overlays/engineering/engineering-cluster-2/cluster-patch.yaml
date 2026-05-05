@@ -107,7 +107,7 @@ spec:
             mode: disabled
           nutanix:
             controlPlaneEndpoint:
-              host: 10.42.163.137
+              host: 10.42.163.167
               port: 6443
               virtualIP:
                 provider: KubeVIP
