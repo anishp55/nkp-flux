@@ -136,7 +136,7 @@ spec:
                     machineDetails:
                       bootType: uefi
                       cluster:
-                        name: RNO-POC007
+                        name: PHX-POC256
                         type: name
                       image:
                         name: nkp-rocky-9.7-release-cis-1.34.3-20260316170119.qcow2
