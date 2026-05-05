@@ -17,7 +17,7 @@ spec:
       cidrBlocks:
         - 10.96.0.0/12
   controlPlaneEndpoint:
-    host: 10.8.18.141
+    host: ${IP_START}.141
     port: 6443
   topology:
     class: nkp-nutanix-v2.17.1
@@ -74,8 +74,8 @@ spec:
             serviceLoadBalancer:
               configuration:
                 addressRanges:
-                  - start: 10.8.18.142
-                    end: 10.8.18.143
+                  - start: ${IP_START}.142
+                    end: ${IP_START}.143
               provider: MetalLB
           controlPlane:
             autoRenewCertificates:
@@ -87,14 +87,14 @@ spec:
               machineDetails:
                 bootType: uefi
                 cluster:
-                  name: RNO-POC007
+                  name: ${PRISM_ELEMENT}
                   type: name
                 image:
-                  name: nkp-rocky-9.7-release-cis-1.34.3-20260316170119.qcow2
+                  name: ${OS_IMAGE_NAME}
                   type: name
                 memorySize: 16Gi
                 subnets:
-                  - name: secondary
+                  - name: ${NETWORK_NAME}
                     type: name
                 systemDiskSize: 80Gi
                 vcpuSockets: 4
@@ -108,7 +108,7 @@ spec:
             mode: disabled
           nutanix:
             controlPlaneEndpoint:
-              host: 10.8.18.141
+              host: ${IP_START}.141
               port: 6443
               virtualIP:
                 provider: KubeVIP
@@ -117,7 +117,7 @@ spec:
                 secretRef:
                   name: sales-cluster-pc-credentials
               insecure: true
-              url: https://10.8.18.7:9440
+              url: https://${IP_START}.7:9440
     workers:
       machineDeployments:
         - class: default-worker
@@ -137,14 +137,14 @@ spec:
                     machineDetails:
                       bootType: uefi
                       cluster:
-                        name: RNO-POC007
+                        name: ${PRISM_ELEMENT}
                         type: name
                       image:
-                        name: nkp-rocky-9.7-release-cis-1.34.3-20260316170119.qcow2
+                        name: ${OS_IMAGE_NAME}
                         type: name
                       memorySize: 32Gi
                       subnets:
-                        - name: secondary
+                        - name: ${NETWORK_NAME}
                           type: name
                       systemDiskSize: 80Gi
                       vcpuSockets: 8
