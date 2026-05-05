@@ -16,7 +16,7 @@ spec:
       cidrBlocks:
         - 10.96.0.0/12
   controlPlaneEndpoint:
-    host: 10.8.18.137
+    host: 10.42.163.137
     port: 6443
   topology:
     class: nkp-nutanix-v2.17.1
@@ -73,8 +73,8 @@ spec:
             serviceLoadBalancer:
               configuration:
                 addressRanges:
-                  - start: 10.8.18.138
-                    end: 10.8.18.140
+                  - start: 10.42.163.138
+                    end: 10.42.163.140
               provider: MetalLB
           controlPlane:
             autoRenewCertificates:
@@ -86,7 +86,7 @@ spec:
               machineDetails:
                 bootType: uefi
                 cluster:
-                  name: RNO-POC007
+                  name: PHX-POC256
                   type: name
                 image:
                   name: nkp-rocky-9.7-release-cis-1.34.3-20260316170119.qcow2
@@ -107,7 +107,7 @@ spec:
             mode: disabled
           nutanix:
             controlPlaneEndpoint:
-              host: 10.8.18.137
+              host: 10.42.163.137
               port: 6443
               virtualIP:
                 provider: KubeVIP
@@ -116,7 +116,7 @@ spec:
                 secretRef:
                   name: engineering-cluster-pc-credentials
               insecure: true
-              url: https://10.8.18.7:9440
+              url: https://10.42.163.7:9440
     workers:
       machineDeployments:
         - class: default-worker
