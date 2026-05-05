@@ -11,6 +11,10 @@ spec:
       namespace: infra-flux-validation
     - name: cluster-credentials
       namespace: infra-flux-validation
+  postBuild:
+    substituteFrom:
+      - kind: ConfigMap
+        name: cluster-values
   interval: 5m0s
   path: ./gitops/clusters
   prune: true
