@@ -5,3 +5,4 @@ resources:
 - overlays/engineering/engineering-cluster-2
 - overlays/finance/finance-cluster
 - overlays/it/it-cluster
+- overlays/sales/sales-cluster
