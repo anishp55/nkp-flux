@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   - sales
   - engineering
-  - finance
-  - it
+  # - finance
+  # - it

@@ -4,5 +4,5 @@ resources:
   - central
   - overlays/sales
   - overlays/engineering
-  - overlays/finance
-  - overlays/it
+  # - overlays/finance
+  # - overlays/it
