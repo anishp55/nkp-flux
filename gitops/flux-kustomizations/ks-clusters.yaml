@@ -15,7 +15,7 @@ spec:
     substituteFrom:
       - kind: ConfigMap
         name: cluster-values
-  interval: 25m0s
+  interval: 15m0s
   path: ./gitops/clusters
   prune: true
   serviceAccountName: infra-flux-validation
