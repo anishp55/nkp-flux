@@ -38,6 +38,10 @@ spec:
             cni:
               provider: Cilium
               strategy: HelmAddon
+              values:
+                sourceRef:
+                  name: engineering-cilium-overrides
+                  kind: ConfigMap
             cosi:
               strategy: HelmAddon
             csi:
